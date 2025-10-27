@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <style>
+    body {
+      border: 2px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section id="contact">
+        <header>
+          <h1>Let's Connect</h1>
+          <h2>Subtitle</h2>
+        </header>
+
+        <button type="button">Send a Message</button>
+
+        <dialog>
+          <form method="dialog">
+            <fieldset>
+              <legend>Send a Message</legend>
+              
+              <label for="name">Your Name:</label><br>
+              <input type="text" id="name" name="name" placeholder="Enter name"><br><br>
+              
+              <label for="email">Your Email:</label><br>
+              <input type="email" id="email" name="email" placeholder="Enter email"><br><br>
+              
+              <label for="message">Your Message:</label><br>
+              <textarea id="message" name="message" rows="5" cols="30" placeholder="Enter message"></textarea><br><br>
+              
+              <button type="submit">Send</button>
+              <button type="button">Close</button>
+            </fieldset>
+          </form>
+        </dialog>
+
+        <picture>
+            <source srcset="images/me1.jpg" media="(max-width: 500px)">
+            <source srcset="images/me2.jpg" media="(min-width: 501px)">
+            <img src="images/me.jpg" alt="Photo of Me">
+        </picture>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>Juan Perez</p>
+    <nav>
+      <ul>
+        <li><a href="tel:+1234567890">Phone</a></li>
+        <li><a href="mailto:myemail@gmail.com">Email</a></li>
+        <li><a href="https://linkedin.com/in/myprofile" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/username" target="_blank">GitHub</a></li>
+        <li><a href="https://instagram.com/username" target="_blank">Instagram</a></li>
+      </ul>
+    </nav>
+  </footer>
+  
+</body>
+</html>

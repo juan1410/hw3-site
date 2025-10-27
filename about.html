@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+
+    <!-- CSS custom element-->
+    <style>
+        profile-card {
+          display: block;
+          border: 2px solid #000;
+          border-radius: 10px;
+          padding: 20px;
+          background-color: #f8f9fa;
+          width: 350px;
+          margin-top: 40px;
+        }
+    
+        profile-card h2 {
+          margin-top: 0;
+          color: darkblue;
+        }
+    
+        profile-card p {
+          font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <section id="about">
+            <header>
+                <h1>About Me</h1>
+            </header>
+            
+            <profile-card>
+                <h2>Juan Perez</h2>
+                <p>Bio description about me here</p>
+            </profile-card>
+
+            <figure>
+                <figcaption>Quick main point about me here</figcaption>
+                <picture>
+                    <source srcset="images/about1.jpg" media="(max-width: 500px)">
+                    <source srcset="images/about2.jpg" media="(min-width: 501px)">
+                    <img src="images/about.jpg" alt="Picture of Me">
+                </picture>            
+            </figure>
+        </section>
+    </main>
+
+</body>
+</html>
