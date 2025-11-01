@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | My Portfolio</title>
-    <link href="main.css" rel="stylesheet/">
-    <style>
+    <link href="styles.css" rel="stylesheet">
+    <!-- <style>
         body {
           border: 2px solid black;
         }
-    </style>
+    </style> -->
 
 </head>
 
@@ -17,10 +17,10 @@
 
     <!-- Header with navigation links -->
     <header>
-        <nav>
+        <nav id="intro-nav">
             <svg width="120" height="50" xmlns="http://www.w3.org/2000/svg">
                 <a href="about.html" target="_blank">
-                    <rect x="0" y="0" width="120" height="50" fill="#0000CD" rx="8" ry="8" />
+                    <rect x="0" y="0" width="120" height="50" fill="blue" rx="8" ry="8" />
                     <text x="60" y="30" font-size="16" text-anchor="middle" fill="white">
                         About
                     </text>
@@ -29,7 +29,7 @@
         
             <svg width="120" height="50" xmlns="http://www.w3.org/2000/svg">
                 <a href="experience.html" target="_blank">
-                    <rect x="0" y="0" width="120" height="50" fill="#0000CD" rx="8" ry="8" />
+                    <rect x="0" y="0" width="120" height="50" fill="blue" rx="8" ry="8" />
                     <text x="60" y="30" font-size="16" text-anchor="middle" fill="white">
                         Experience
                     </text>
@@ -38,7 +38,7 @@
         
             <svg width="120" height="50" xmlns="http://www.w3.org/2000/svg">
                 <a href="achievements.html" target="_blank">
-                    <rect x="0" y="0" width="120" height="50" fill="#0000CD" rx="8" ry="8" />
+                    <rect x="0" y="0" width="120" height="50" fill="blue" rx="8" ry="8" />
                     <text x="60" y="30" font-size="16" text-anchor="middle" fill="white">
                         Achievements
                     </text>
@@ -48,7 +48,7 @@
 
             <svg width="120" height="50" xmlns="http://www.w3.org/2000/svg">
                 <a href="skills.html" target="_blank">
-                    <rect x="0" y="0" width="120" height="50" fill="#0000CD" rx="8" ry="8" />
+                    <rect x="0" y="0" width="120" height="50" fill="blue" rx="8" ry="8" />
                     <text x="60" y="30" font-size="16" text-anchor="middle" fill="white">
                         Skills
                     </text>
@@ -57,7 +57,7 @@
 
             <svg width="120" height="50" xmlns="http://www.w3.org/2000/svg">
                 <a href="projects.html" target="_blank">
-                    <rect x="0" y="0" width="120" height="50" fill="#0000CD" rx="8" ry="8" />
+                    <rect x="0" y="0" width="120" height="50" fill="blue" rx="8" ry="8" />
                     <text x="60" y="30" font-size="16" text-anchor="middle" fill="white">
                         Projects
                     </text>
@@ -66,7 +66,7 @@
 
             <svg width="120" height="50" xmlns="http://www.w3.org/2000/svg">
                 <a href="contact.html" target="_blank">
-                    <rect x="0" y="0" width="120" height="50" fill="#0000CD" rx="8" ry="8" />
+                    <rect x="0" y="0" width="120" height="50" fill="blue" rx="8" ry="8" />
                     <text x="60" y="30" font-size="16" text-anchor="middle" fill="white">
                         Contact
                     </text>
@@ -76,16 +76,17 @@
     </header>
 
     <!-- Intro page content -->
-    <main>
+    <main id ="intro-layout">
         <section id="intro">
-            <picture>
+            <picture id="profile-image">
                 <source srcset="images/profile1.jpg" media="(max-width: 500px)">
                 <source srcset="images/profile2.jpg" media="(min-width: 501px)">
                 <img src="images/profile.jpg" alt="Photo of Me">
             </picture>            
         
-            <h1>Hello, I'm <span>Juan Perez</span>. Here you can check out what I work on and what I do.</h1>
-
+            <h1 id="message">
+                Hello, I'm <span>Juan Perez</span>, current Computer Engineering student. You can check out what I do and what I work on below.
+            </h1>
         </section>
     </main>
 
