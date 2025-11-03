@@ -1,15 +1,26 @@
 html{
     background: rgb(0, 20, 50);
 }
-header{
+#nav-bar{
     /* background: green; */
-    padding: 0 1rem;
+    padding: 0 1rem; 
+    border-bottom-color: white; 
+    border-bottom-style: solid;
 }
 body{
     /* background: red; */
-    font-family:'Montserrat', sans-serif;
+    font-family: serif;
     margin: 0;
     padding: 0;
+}
+p{
+    color:rgb(161, 158, 158);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+h1, h2, h3{
+    color: lightgrey;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 a{
     /* background: red; */
@@ -38,7 +49,6 @@ nav{
 #logo {
     z-index: 1000;
     width: fit-content;
-    font-family: poppins;
     font-size: 32px;
     color: white;
     font-weight: 600;
@@ -50,7 +60,6 @@ nav{
 }
 #logo a{
     font-size: 32px;
-    font-family: poppins;
     padding: 0;
     width: fit-content;
 }
@@ -97,6 +106,170 @@ nav ul{
 #message span{
     color: darkgreen;
 }
+
+
+
+/* About page */
+main header{
+    /* background: blue; */
+    padding: 2rem 1rem;
+    margin: 4rem 1rem;
+}
+.content-title{
+    color: white;
+    margin: 0;
+    font-size: 8dvw;
+}
+#about{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    height: 100dvh
+}
+@scope (#about){
+    header{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    profile-card{
+        /* background: green; */
+        grid-column: 1/2;
+        grid-row: 2/3;
+        display: block;
+        padding: 0 1rem;
+        margin: 0 1rem;
+        color: white;
+        flex: column;
+        width: 50dvw;
+    }
+    figure{
+        grid-column: 2/3;
+        grid-row: 1/3;
+        display:block;
+        /* background: red; */
+        padding: 1rem;
+    }
+    #about-image figcaption{
+        /* background: green; */
+        color: white;
+        font-size: 20px;
+        padding: 1rem 0;
+        margin: 1rem 0;
+    }
+    #about-image img {
+        /* background: blue; */
+        display: block;
+        color: white;
+        max-width: 100%;
+        height: auto;   
+        /* border-radius: 0.5rem;  */
+    }
+}
+
+
+/* skills page */
+#skills{
+    /* background: blue; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    height: 100dvh;
+}
+#skills header{
+    grid-row: 1/2;
+    grid-column: 1/3;
+    /* background: green; */
+    margin: 0;
+    text-align: left;
+}
+@scope (#skills){
+    h1{
+        font-size: 5dvw;
+    }
+    h2{
+        margin: 1rem;
+        font-size: 2dvw;
+    }
+    h3{
+        font-size: 1.5dvw;
+    }
+    #technical-skills, #soft-skills{
+        /* background:red; */
+        text-align: center;
+        margin: 0 0 4rem;
+        color: lightgrey;
+        
+        ul{
+            /* background: green; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            li{
+                /* background: red; */
+                justify-content: center;
+                margin: 1rem;
+            }
+        }
+    }
+    #soft-skills{
+        /* background: blue; */
+    }
+    #language-proficiency{
+        /* background: green; */
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+
+        h3{
+            grid-row: 1/6;
+            grid-column: 1/2;
+            /* background: red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        i{
+            margin: 3rem;
+        }
+    }
+    #tools-and-technologies{
+        /* background: red; */
+        text-align: center;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        place-items: center;
+
+        h3{
+            grid-row: 1/2;
+            grid-column: 1/3;
+        }
+
+        figure{
+            display: block;
+            /* background: red; */
+            width: 100px;
+            height: 100px;
+            /* object-fit: cover; */
+            border-radius: 50%;
+        }
+
+        img{
+            display:block;
+            background: darkgreen;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            /* object-fit: cover; */
+        }
+        figcaption{
+            color:lightgrey;
+        }
+    }
+
+}
+
 
 @media screen and (max-width: 850px){
     nav{
@@ -149,130 +322,31 @@ nav ul{
         box-sizing: border-box;
         font-size: 18px;
     }
-
     #menu:checked ~ ul{
         max-height: 100%;
     }
-
     #menu:checked ~ #logo label::before{
         content:"close";
     }
-}
 
-main header{
-    /* background: red; */
-    padding: 2rem 1rem;
-    margin: 4rem 1rem;
-}
-
-.content-title{
-    color: white;
-    margin: 0;
-    font-size: 8dvw;
-}
-
-#about{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr;
-    height: 100dvh
-}
-
-#about header{
-    grid-column: 1/2;
-    grid-row: 1/2;
-}
-
-#about profile-card{
-    /* background: green; */
-    grid-column: 1/2;
-    grid-row: 2/3;
-    display: block;
-    padding: 0 1rem;
-    margin: 0 1rem;
-    color: white;
-    flex: column;
-    width: 50dvw;
-}
-
-profile-card h2{
-    /* margin: 1rem; */
-    color: lightgrey;
-}
-
-#about figure{
-    grid-column: 2/3;
-    grid-row: 1/3;
-    display:block;
-    /* background: red; */
-    padding: 1rem;
-}
-
-#about-image figcaption{
-    /* background: green; */
-    color: white;
-    font-size: 20px;
-    padding: 1rem 0;
-    margin: 1rem 0;
-}
-
-#about-image img {
-    /* background: blue; */
-    display: block;
-    color: white;
-    max-width: 100%;
-    height: auto;   
-    /* border-radius: 0.5rem;  */
-}
-
-
-@media screen and (max-width: 850px) {
+    /* About page */
     #about {
         display: flex;
         flex-direction: column;
     }
-
     #about profile-card{
         width: fit-content;
     }
-  
     #about figure{
         margin: 0 1rem;
         padding: 0 1rem;
         /* background: green; */
     }
-  
     #about-image img {
         width: 90%;                 
         height: auto;
         /* margin: 0 auto; */
     }
-}
-
-#experience{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr;
-}
-
-#experience header{
-    grid-column: 1/3;    
-    grid-row: 1/2;       
-    margin: 0;
-    /* background: red; */
-    padding: 2rem 0 5rem;
-    text-align: center;
-    font-size: 1dvw;
-}
-
-#experience aside{
-    grid-column: 1/2;
-    grid-row: 2/3;
-}
-
-#experience #experiences-list{
-    grid-column: 2/3;
-    grid-row: 2/3;
 }
 
   
