@@ -1,16 +1,132 @@
 html{
-    background:rgb(20,20,60);
+    background: rgb(0, 20, 50);
+}
+header{
+    /* background: green; */
+    padding: 0 1rem;
+}
+body{
+    font-family:'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    width: 100px;
+    padding: 16px;
+    border-radius: 10mm; 
+}
+a:hover{
+    text-align: center;
+    color: darkgreen;
+}
+ul{
+    list-style:none;
+}
+nav{
+    width: 100%;
+    box-sizing: border-box;
+    /* background: rgb(0, 20, 50); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#logo{
+    z-index: 1000;
+    width: fit-content;
+    font-family: poppins;
+    font-size: 32px;
+    color: white;
+    font-weight: 600;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+#logo label{
+    z-index: 1000;
+    display:none;
+}
+#menu{
+    display: none;
+}
+nav ul{
+    /* position:fixed; */
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+@media screen and (max-width: 850px){
+    nav{
+        display:flex;
+        flex-direction: column;
+        position: relative;
+    }
+    #logo{
+        width: 100%;
+    }
+    #logo label{
+        display:block;
+        cursor: pointer;
+        position:relative;
+        width: 30px;
+        height: 30px;
+    }
+    #logo label::before{
+        position:absolute;
+        content: "menu";
+        font-family: 'Material Icons';
+        top: 0;
+        left: 0;
+        font-size: 30px;
+    }
+    nav ul{
+        position: fixed;
+        inset: 0;              
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        background: rgb(0, 20, 50);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.5s ease; 
+    }
+    li{
+        width: 50%;
+        text-align: center;
+    }
+    a{
+        display: block;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        font-size: 18px;
+    }
+
+    #menu:checked ~ ul{
+        max-height: 100%;
+    }
+
+    #menu:checked ~ #logo label::before{
+        content:"close";
+    }
 }
 
-/* nav{
-    background:red;
-} */
-
-/* #intro-layout {
+#intro-layout {
     display: grid;
     place-items: center;   
     min-height: 60dvh;   
-} */
+}
   
 #intro {
     display: flex;
@@ -18,24 +134,21 @@ html{
     align-items: center;   
     text-align: center;
     /* background: lightblue; */
-    /* border-radius: 1rem; */
-    padding: 8rem;
+    padding: 4rem;
 }
   
 #profile-image img {
     display: block;
-    background: blue;
+    background: darkgreen;
     width: 350px;
     height: 350px;
     border-radius: 50%;
     margin-bottom: 5rem;
 }
-  
-#message {
-    font-family: sans-serif;
-    font-size: 3vw;
-    color: white;
-    margin: 0;
+
+#message span{
+    color: darkgreen;
 }
+
   
   
