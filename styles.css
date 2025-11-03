@@ -167,7 +167,7 @@ main header{
 }
 
 
-/* skills page */
+/* Skills page */
 #skills{
     /* background: blue; */
     display: grid;
@@ -346,6 +346,22 @@ main header{
         width: 90%;                 
         height: auto;
         /* margin: 0 auto; */
+    }
+
+    /* skills page */
+    #skills{
+        display: flex;
+        flex-direction: column;
+    }
+    #skills h2{
+        font-size: 4dvw;
+    }
+    #skills h3{
+        font-size: 3dvw;
+    }
+    #skills #language-proficiency{
+        /* background:red; */
+        margin: 0 0 4rem;
     }
 }
 
