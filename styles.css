@@ -6,11 +6,13 @@ header{
     padding: 0 1rem;
 }
 body{
+    /* background: red; */
     font-family:'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
 }
 a{
+    /* background: red; */
     text-decoration: none;
     color: white;
     font-weight: 600;
@@ -22,7 +24,7 @@ a:hover{
     text-align: center;
     color: darkgreen;
 }
-ul{
+ul, ol{
     list-style:none;
 }
 nav{
@@ -33,7 +35,7 @@ nav{
     align-items: center;
     justify-content: space-between;
 }
-#logo{
+#logo {
     z-index: 1000;
     width: fit-content;
     font-family: poppins;
@@ -45,6 +47,12 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between; 
+}
+#logo a{
+    font-size: 32px;
+    font-family: poppins;
+    padding: 0;
+    width: fit-content;
 }
 #logo label{
     z-index: 1000;
@@ -60,7 +68,36 @@ nav ul{
     align-items: center;
     justify-content: center;
 }
- 
+
+#intro-layout {
+    display: grid;
+    place-items: center;   
+    min-height: 60dvh;   
+}
+  
+#intro {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;   
+    text-align: center;
+    /* background: lightblue; */
+    padding: 4rem;
+}
+  
+#profile-image img {
+    display: block;
+    background: darkgreen;
+    width: 350px;
+    height: 350px;
+    /* object-fit: cover; */
+    border-radius: 50%;
+    margin-bottom: 5rem;
+}
+
+#message span{
+    color: darkgreen;
+}
+
 @media screen and (max-width: 850px){
     nav{
         display:flex;
@@ -88,8 +125,8 @@ nav ul{
     nav ul{
         position: fixed;
         inset: 0;              
-        width: 100vw;
-        height: 100vh;
+        width: 100dvw;
+        height: 100dvh;
         margin: 0;
         padding: 0;
         background: rgb(0, 20, 50);
@@ -122,32 +159,120 @@ nav ul{
     }
 }
 
-#intro-layout {
-    display: grid;
-    place-items: center;   
-    min-height: 60dvh;   
-}
-  
-#intro {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;   
-    text-align: center;
-    /* background: lightblue; */
-    padding: 4rem;
-}
-  
-#profile-image img {
-    display: block;
-    background: darkgreen;
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-    margin-bottom: 5rem;
+main header{
+    /* background: red; */
+    padding: 2rem 1rem;
+    margin: 4rem 1rem;
 }
 
-#message span{
-    color: darkgreen;
+.content-title{
+    color: white;
+    margin: 0;
+    font-size: 8dvw;
+}
+
+#about{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    height: 100dvh
+}
+
+#about header{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+#about profile-card{
+    /* background: green; */
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: block;
+    padding: 0 1rem;
+    margin: 0 1rem;
+    color: white;
+    flex: column;
+    width: 50dvw;
+}
+
+profile-card h2{
+    /* margin: 1rem; */
+    color: lightgrey;
+}
+
+#about figure{
+    grid-column: 2/3;
+    grid-row: 1/3;
+    display:block;
+    /* background: red; */
+    padding: 1rem;
+}
+
+#about-image figcaption{
+    /* background: green; */
+    color: white;
+    font-size: 20px;
+    padding: 1rem 0;
+    margin: 1rem 0;
+}
+
+#about-image img {
+    /* background: blue; */
+    display: block;
+    color: white;
+    max-width: 100%;
+    height: auto;   
+    /* border-radius: 0.5rem;  */
+}
+
+
+@media screen and (max-width: 850px) {
+    #about {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #about profile-card{
+        width: fit-content;
+    }
+  
+    #about figure{
+        margin: 0 1rem;
+        padding: 0 1rem;
+        /* background: green; */
+    }
+  
+    #about-image img {
+        width: 90%;                 
+        height: auto;
+        /* margin: 0 auto; */
+    }
+}
+
+#experience{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+}
+
+#experience header{
+    grid-column: 1/3;    
+    grid-row: 1/2;       
+    margin: 0;
+    /* background: red; */
+    padding: 2rem 0 5rem;
+    text-align: center;
+    font-size: 1dvw;
+}
+
+#experience aside{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+#experience #experiences-list{
+    grid-column: 2/3;
+    grid-row: 2/3;
 }
 
   
