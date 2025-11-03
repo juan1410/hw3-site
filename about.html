@@ -4,35 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
-
-    <!-- CSS custom element-->
-    <style>
-        profile-card {
-          display: block;
-          border: 2px solid #000;
-          border-radius: 10px;
-          padding: 20px;
-          background-color: #f8f9fa;
-          width: 350px;
-          margin-top: 40px;
-        }
-    
-        profile-card h2 {
-          margin-top: 0;
-          color: darkblue;
-        }
-    
-        profile-card p {
-          font-size: 2em;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
+
+    <header>
+        <nav>
+            <input type="checkbox" id="menu" />
+            <p id="logo">
+                Juan Perez
+                <label for="menu"></label>
+            </p>
+            <ul class="items">
+                <li><a href="about.html">About</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="experiments.html">Experiments</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
         <section id="about">
             <header>
-                <h1>About Me</h1>
+                <h1 class="content-title">About Me</h1>
             </header>
             
             <profile-card>
