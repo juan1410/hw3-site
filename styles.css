@@ -1,5 +1,9 @@
+:root {
+    --main-color: rgb(0,20,50);
+    --main-font: 'Merriweather';   /*custom font imported */
+  }
 html{
-    background: rgb(0, 20, 50);
+    background: var(--main-color, blue);
 }
 #nav-bar{
     /* background: green; */
@@ -15,12 +19,11 @@ body{
 }
 p{
     color:rgb(161, 158, 158);
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
+    font-family: serif;
 }
 h1, h2, h3{
     color: lightgrey;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: var(--main-font, serif);
 }
 a{
     /* background: red; */
@@ -359,7 +362,7 @@ main header{
     button{
         grid-row: 2/3;
         grid-column: 1/3;
-        background: rgb(0,20,50);
+        background: var(--main-color, blue);
         cursor: pointer;
         margin-bottom: 2rem;
         padding: 0.5rem;
@@ -372,7 +375,7 @@ main header{
     }
     button:hover{
         background: lightblue;
-        color: rgb(0,20,50);
+        color: var(--main-color, blue);
     }
     picture{
         /* background: red; */
@@ -606,7 +609,7 @@ footer a{
         background: lightblue;
     }
     div:hover h2{
-        color: rgb(0,20,50);
+        color: var(--main-color, blue);
     }
 }
 
