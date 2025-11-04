@@ -36,11 +36,17 @@
   <main>
     <section id="contact">
         <header>
-          <h1>Let's Connect</h1>
+          <h1 class="content-title">Let's Connect</h1>
           <h2>Subtitle</h2>
         </header>
 
-        <button type="button">Send a Message</button>
+        <picture>
+            <source srcset="images/me1.jpg" media="(max-width: 500px)">
+            <source srcset="images/me2.jpg" media="(min-width: 501px)">
+            <img src="images/me.jpg" alt="Photo of Me">
+        </picture>
+
+        <button type="button">Contact Me</button>
 
         <dialog>
           <form method="dialog">
@@ -61,12 +67,6 @@
             </fieldset>
           </form>
         </dialog>
-
-        <picture>
-            <source srcset="images/me1.jpg" media="(max-width: 500px)">
-            <source srcset="images/me2.jpg" media="(min-width: 501px)">
-            <img src="images/me.jpg" alt="Photo of Me">
-        </picture>
 
     </section>
   </main>
