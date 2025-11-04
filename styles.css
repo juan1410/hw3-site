@@ -2,6 +2,21 @@
     --main-color: rgb(0,20,50);
     --main-font: 'Merriweather';   /*custom font imported */
   }
+
+/* CSS animation */
+@keyframes fadeInDown {
+from {
+    opacity: 0;
+    transform: translateY(-50px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+main{
+    animation: fadeInDown 1s ease-in-out;
+}
 html{
     background: var(--main-color, blue);
 }
