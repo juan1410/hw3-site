@@ -41,7 +41,7 @@ a:hover{
 }
 ul, ol{
     list-style:none;
-    transition: color 10s ease;
+    /* transition: color 10s ease; */
 
 }
 img{
@@ -327,6 +327,7 @@ main header{
         color: white;
     }
     article:hover{
+        transform: scale(1.05); 
         display:block;
         background: lightblue;
         color: black;
@@ -606,6 +607,7 @@ footer a{
     }
     div:hover{
         /* display: block; */
+        transform: scale(1.05); 
         background: lightblue;
     }
     div:hover h2{
