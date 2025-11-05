@@ -78,7 +78,7 @@ img{
     object-fit: cover;
     color:white;
 }
-nav{
+nav:has(ul){    /* used has selector */
     width: 100%;
     box-sizing: border-box;
     /* background: rgb(0, 20, 50); */
@@ -238,7 +238,7 @@ main header{
     h3{
         font-size: 1.5dvw;
     }
-    #technical-skills, #soft-skills{
+    div:has(ul){                /* used has selector for div */
         /* background:red; */
         text-align: center;
         margin: 0 0 4rem;
